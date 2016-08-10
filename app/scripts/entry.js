@@ -33,7 +33,7 @@ const Test = React.createClass({
 })
 
 const router = (
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
     <IndexRoute component={Home}/>
     <Route path="/test" component={Test}/>
