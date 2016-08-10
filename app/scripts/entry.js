@@ -31,6 +31,13 @@ const Test = React.createClass({
     )
   }
 })
+const NotFound = React.createClass({
+  render: function() {
+    return (
+      <Link to="/">Not found, go Back to safety</Link>
+    )
+  }
+})
 
 const router = (
   <Router history={browserHistory}>
@@ -38,6 +45,7 @@ const router = (
     <IndexRoute component={Home}/>
     <Route path="/test" component={Test}/>
     </Route>
+    <Route path="/*" component={NotFound}/>
   </Router>
 )
 
